@@ -1,0 +1,82 @@
+﻿@model Project_Model.Model.Appointment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Doctor.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doctor.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Group.GroupName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Group.GroupName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfVisit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfVisit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfSessions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfSessions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsFristSession)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsFristSession)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

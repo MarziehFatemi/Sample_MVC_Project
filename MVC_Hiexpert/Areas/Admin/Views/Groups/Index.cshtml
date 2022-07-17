@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MVC_Hiexpert.Models.ViewModel.Group_ViewModel.Group_ViewModel>
+
+@{
+    ViewBag.Title = "حوزه های مشاوره ";
+}
+
+<h2>نمایش لیست حوزه های مشاوره </h2>
+
+<p>
+    @Html.ActionLink("اضافه کردن حوزه مشاوره جدید", "Create",null,new{@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GroupName)
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.GroupId },new{@class="btn btn-warning"}) |
+            @Html.ActionLink("جزییات", "Details", new { id=item.GroupId },new{@class="btn btn-info"}) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.GroupId },new{@class="btn btn-danger"})
+        </td>
+    </tr>
+}
+
+</table>

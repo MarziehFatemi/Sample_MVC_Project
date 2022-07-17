@@ -1,0 +1,50 @@
+﻿@model MVC_Hiexpert.Models.ViewModel.Payment_ViewModel.Payment_ViewModel
+
+@{
+    ViewBag.Title = "جزئیات پرداخت";
+}
+
+<h2>جزئیات پرداخت</h2>
+
+<div>
+   
+    <dl class="dl-horizontal">
+        <dd>
+            @Html.DisplayFor(model => model.DoctorName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PayedMoney)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PayedMoney)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PayedMoney)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PayedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PayedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PaymentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

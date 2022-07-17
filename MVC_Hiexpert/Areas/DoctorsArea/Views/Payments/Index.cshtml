@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Project_Model.Model.Payment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>نمایش لیست</h2>
+
+<p>
+    @Html.ActionLink("درج رکورد جدید", "Create",null,new{@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PayedMoney)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayedTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayedMoney)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayedTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentNumber)
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.PaymentId },new{@class="btn btn-warning"}) |
+            @Html.ActionLink("جزییات", "Details", new { id=item.PaymentId },new{@class="btn btn-info"}) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.PaymentId },new{@class="btn btn-danger"})
+        </td>
+    </tr>
+}
+
+</table>

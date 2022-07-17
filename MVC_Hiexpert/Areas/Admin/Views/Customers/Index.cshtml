@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MVC_Hiexpert.Models.ViewModel.Customer_ViewModels.C_List_ViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>نمایش لیست کاربران</h2>
+
+<p>
+    @Html.ActionLink("افزودن کاربر جدید", "Create",null,new{@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+
+
+
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+
+
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id = item.CustomerId }, new { @class = "btn btn-warning" }) |
+            @Html.ActionLink("جزییات", "Details", new { id = item.CustomerId }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("حذف", "Delete", new { id = item.CustomerId }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

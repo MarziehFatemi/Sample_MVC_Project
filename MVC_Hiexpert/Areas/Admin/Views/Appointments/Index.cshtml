@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MVC_Hiexpert.Models.ViewModel.Appointment_ViewModel.Appointment_List_ViewModel>
+
+@{
+    ViewBag.Title = "نمایش لیست صورت حساب های ویزیت";
+}
+
+<h2>نمایش لیست صورت حساب های ویزیت</h2>
+
+<p>
+    @Html.ActionLink("افزودن ویزیت", "Create",null,new{@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorName)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfVisit)
+        </th>
+       
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Payment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoctorName)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfVisit)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentNumber)
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.Id },new{@class="btn btn-warning"}) |
+            @Html.ActionLink("جزییات", "Details", new { id=item.Id },new{@class="btn btn-info"}) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id },new{@class="btn btn-danger"})
+        </td>
+    </tr>
+}
+
+</table>

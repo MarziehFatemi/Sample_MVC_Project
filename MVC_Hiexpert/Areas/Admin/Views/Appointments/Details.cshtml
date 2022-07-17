@@ -1,0 +1,75 @@
+﻿@model MVC_Hiexpert.Models.ViewModel.Appointment_ViewModel.Appointment_Detail_ViewModel
+
+@{
+    ViewBag.Title = "جزئیات اطلاعات صورت حساب";
+}
+
+<h2> جزئیات اطلاعات صورت حساب ویزیت</h2>
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfVisit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfVisit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfSessions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfSessions)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("بازگشت به لیست", "Index")
+</p>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable< MVC_Hiexpert.Models.ViewModel.Payment_ViewModel.Payment_ViewModel>
+
+@{
+    ViewBag.Title = "لیست پرداختی به مشاورین";
+}
+
+<h2>نمایش لیست واریزی مشاورین</h2>
+
+<p>
+    @Html.ActionLink("افزودن پرداختی جدید", "Create",null,new{@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.PayedMoney)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayedTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.DoctorName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.PayedMoney)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PayedTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentNumber)
+        </td>
+        <td>
+             @Html.ActionLink("جزییات", "Details", new { id = item.PaymentId }, new { @class = "btn btn-info" }) |
+        </td>
+    </tr>
+}
+
+</table>

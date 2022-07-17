@@ -1,0 +1,81 @@
+﻿@model MVC_Hiexpert.Models.ViewModel.Customer_ViewModels.C_Details_ViewModel
+
+@{
+    ViewBag.Title = "جزئیات";
+}
+
+<h2>جزئیات کاربر</h2>
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegisterDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegisterDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfTotalSessions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfTotalSessions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.CustomerId }) |
+    @Html.ActionLink("بازگشت به لیست", "Index")
+</p>

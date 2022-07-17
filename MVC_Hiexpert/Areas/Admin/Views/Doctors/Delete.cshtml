@@ -1,0 +1,113 @@
+﻿@model MVC_Hiexpert.Models.ViewModel.Dr_DetailsViewModel
+
+@{
+    ViewBag.Title = "حذف مشاور";
+}
+
+<h2>حذف مشاور</h2>
+
+<h3>آیا از حذف مشاور اطمینان دارید؟</h3>
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegisterDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegisterDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalSale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalSale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalIncome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalIncome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommissionPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommissionPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCheckedOut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCheckedOut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credit)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

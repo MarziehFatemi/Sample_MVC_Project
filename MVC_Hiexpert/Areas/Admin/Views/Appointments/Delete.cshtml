@@ -1,0 +1,79 @@
+﻿@model MVC_Hiexpert.Models.ViewModel.Appointment_ViewModel.Appointment_Detail_ViewModel
+
+@{
+    ViewBag.Title = "حذف ویزیت";
+}
+
+<h2>حذف ویزیت</h2>
+
+<h3>آیا از حذف اطلاعات صورت حساب ویزیت اطمینان دارید؟</h3>
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfVisit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfVisit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfSessions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfSessions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentNumber)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت به لیست ", "Index")
+        </div>
+    }
+</div>

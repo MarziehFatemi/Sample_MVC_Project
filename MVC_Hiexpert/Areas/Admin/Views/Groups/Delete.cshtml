@@ -1,0 +1,31 @@
+﻿@model MVC_Hiexpert.Models.ViewModel.Group_ViewModel.Group_ViewModel
+
+@{
+    ViewBag.Title = "حذف گروه مشاوره";
+}
+
+<h2>حذف گروه مشاوره</h2>
+
+<h3>آیا از حذف کردن این دسته مطمئن هستید؟</h3>
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
