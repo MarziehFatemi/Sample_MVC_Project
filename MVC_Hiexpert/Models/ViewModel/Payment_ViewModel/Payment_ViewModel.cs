@@ -15,7 +15,7 @@ namespace MVC_Hiexpert.Models.ViewModel.Payment_ViewModel
 
         [Required]
         [Display(Name = "شماره مشاور")]
-        public int DoctorId;
+        public int DoctorId { get; set; }
 
         [Display(Name = "نام مشاور")]
         public string DoctorName { get; set; }

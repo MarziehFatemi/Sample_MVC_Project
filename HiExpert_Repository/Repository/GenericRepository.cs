@@ -94,7 +94,14 @@ namespace Hiexpert.Repository.Repository
 
         public void Save()
         {
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+            }
+            catch
+            {
+
+            }
         }
 
         public void Dispose()
