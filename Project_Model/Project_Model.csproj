@@ -56,6 +56,14 @@
     <Compile Include="Migrations\202207171007383_CreateDb.designer.cs">
       <DependentUpon>202207171007383_CreateDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207281039356_Doctor_Customer_Many2Many_Resolved_By_Appointment.cs" />
+    <Compile Include="Migrations\202207281039356_Doctor_Customer_Many2Many_Resolved_By_Appointment.designer.cs">
+      <DependentUpon>202207281039356_Doctor_Customer_Many2Many_Resolved_By_Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207281041310_Doctor_Customer_Many2Many_Resolved_By_Appointment2.cs" />
+    <Compile Include="Migrations\202207281041310_Doctor_Customer_Many2Many_Resolved_By_Appointment2.designer.cs">
+      <DependentUpon>202207281041310_Doctor_Customer_Many2Many_Resolved_By_Appointment2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\BaseEntity.cs" />
@@ -72,6 +80,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202207171007383_CreateDb.resx">
       <DependentUpon>202207171007383_CreateDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207281039356_Doctor_Customer_Many2Many_Resolved_By_Appointment.resx">
+      <DependentUpon>202207281039356_Doctor_Customer_Many2Many_Resolved_By_Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207281041310_Doctor_Customer_Many2Many_Resolved_By_Appointment2.resx">
+      <DependentUpon>202207281041310_Doctor_Customer_Many2Many_Resolved_By_Appointment2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

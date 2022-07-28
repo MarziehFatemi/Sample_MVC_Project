@@ -67,7 +67,7 @@ namespace Project_Model.Model
         public int Credit { get; set; }
 
 
-        public IEnumerable <Customer> Customers { get; set; }
+       
         public IEnumerable<Appointment> Appointments { get; set; }
 
         public IEnumerable<Payment> CheckOuts { get; set; }

@@ -41,8 +41,8 @@ namespace Project_Model.Model
         public int NumberOfTotalSessions { get; set; }
         public int Credit { get; set; }
 
-        public IEnumerable<Doctor> Doctors { get; set; }
+       
         public IEnumerable<Appointment> Appointments { get; set; }
-        public IEnumerable<Group> Groups { get; set; }
+        
     }
 }
